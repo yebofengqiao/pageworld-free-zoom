@@ -1,0 +1,46 @@
+{
+  "name": "@pageworld/freezoom",
+  "version": "1.0.1",
+  "main": "lib/bundle.cjs.js",
+  "jsnext:main": "lib/bundle.esm.js",
+  "module": "lib/bundle.esm.js",
+  "browser": "lib/bundle.browser.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx rollup -wc rollup.config.dev.js",
+    "build": "npx rollup -c rollup.config.prod.js && npm run build:types",
+    "build:types": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yebofengqiao/pageworld-free-zoom.git"
+  },
+  "keywords": ["rect", "functional", "zoomFreeCornerFree", "zoomLockCornerFree", "zoomEdgeFree"],
+  "author": "yebofengqiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yebofengqiao/pageworld-free-zoom/issues"
+  },
+  "homepage": "https://github.com/yebofengqiao/pageworld-free-zoom#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "rollup": "^2.70.1",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  }
+}
