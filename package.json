@@ -11,7 +11,8 @@
     "dev": "npx rollup -wc rollup.config.dev.js",
     "build": "npx rollup -c rollup.config.prod.js && npm run build:types",
     "build:types": "npx tsc",
-    "commit": "git cz"
+    "commit": "git cz",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2",
+    "standard-version": "^9.3.2",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3"
   }
