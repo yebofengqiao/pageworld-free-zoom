@@ -1,6 +1,6 @@
 {
   "name": "@pageworld/freezoom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/bundle.cjs.js",
   "jsnext:main": "lib/bundle.esm.js",
   "module": "lib/bundle.esm.js",
