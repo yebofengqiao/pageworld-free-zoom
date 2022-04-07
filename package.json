@@ -10,13 +10,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx rollup -wc rollup.config.dev.js",
     "build": "npx rollup -c rollup.config.prod.js && npm run build:types",
-    "build:types": "npx tsc"
+    "build:types": "npx tsc",
+    "commit": "git cz"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yebofengqiao/pageworld-free-zoom.git"
   },
-  "keywords": ["rect", "functional", "zoomFreeCornerFree", "zoomLockCornerFree", "zoomEdgeFree"],
+  "keywords": [
+    "rect",
+    "functional",
+    "zoomFreeCornerFree",
+    "zoomLockCornerFree",
+    "zoomEdgeFree"
+  ],
   "author": "yebofengqiao",
   "license": "MIT",
   "bugs": {
@@ -26,13 +33,38 @@
   "directories": {
     "lib": "lib"
   },
+  "ignoreChanges": [
+    "ignored-file",
+    "**/__tests__/**",
+    "**/*.md"
+  ],
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "description": "",
   "devDependencies": {
     "@babel/core": "^7.17.8",
+    "@commitlint/cli": "^16.2.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-eslint": "^8.0.1",
     "@rollup/plugin-typescript": "^8.3.1",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.4",
     "rollup": "^2.70.1",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-json": "^4.0.0",
