@@ -12,7 +12,8 @@
     "build": "npx rollup -c rollup.config.prod.js && npm run build:types",
     "build:types": "npx tsc",
     "commit": "git cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -49,10 +50,8 @@
       "path": "node_modules/cz-customizable"
     }
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
-    }
+  "gitHooks": {
+    "commit-msg": "commitlint -e -V"
   },
   "description": "",
   "devDependencies": {
